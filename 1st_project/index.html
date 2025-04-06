@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output.css" />
+    <!-- łączy plik html z plikiem css  -->
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <select id="mode-select">
+      <option value="pvp">pvp</option>
+      <option value="easy">easy</option>
+      <option value="medium">medium</option>
+      <!-- <option value="hard">hard</option> -->
+    </select>
+    <!-- Potrzebujemy 9 bloków które później owiniemy stylem i funkcjonalnością -->
+    <br><br>
+     <p class="current-player">
+      <span>Kolej gracza:&nbsp;</span>
+      <span id="current-player"></span>
+     </p>
+     <br>
+     <!-- <p class="time-for-move">
+     <span>Czas ruchu:&nbsp;</span>
+     <span id="time-for-move"></span>
+    </p> -->
+
+    <div class="wrapper">
+      <p class="panel"></p>
+      <!-- Nadajemy klasę w  -->
+      <div class="board">
+        <div class="board__item" data-pos="0"></div>
+        <div class="board__item" data-pos="1"></div>
+        <div class="board__item" data-pos="2"></div>
+        <div class="board__item" data-pos="3"></div>
+        <div class="board__item" data-pos="4"></div>
+        <div class="board__item" data-pos="5"></div>
+        <div class="board__item" data-pos="6"></div>
+        <div class="board__item" data-pos="7"></div>
+        <div class="board__item" data-pos="8"></div>
+      </div>
+      <button class="reset-button">Reset the game</button>
+      <!-- Tworzymy przycisk do zresetowania gry -->
+    </div>
+    <!-- div*x tworzy taką ilość <div></div> jaka jest zawarta w x -->
+    <script type="module" src="code.js"></script>
+    <!-- przypisujemy plik code.js do pliku html -->
+  </body>
+</html>

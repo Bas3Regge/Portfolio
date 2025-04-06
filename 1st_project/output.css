@@ -1,0 +1,128 @@
+@charset "UTF-8";
+* {
+  margin: 0; /*usuwa margines z ciała strony html*/
+  padding: 0; /*usuwa przestrzeń wokół zawartości elementu na stronie html*/
+  box-sizing: border-box; /*oznacza, że padding i border są wliczane do zadeklarowanej szerokości i wysokości elementu, zamiast być dodawane na zewnątrz. Dzięki temu łatwiej jest przewidzieć faktyczne wymiary elementów na stronie.*/
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+.wrapper {
+  display: flex; /*samo układa elementy jeden obok drugiego*/
+  flex-direction: column; /*układa elementy jeden pod drugim*/
+  align-items: center; /*Wyśrodkowuje elementy*/
+  margin-top: 50px; /*oddala elementy na stronie od górnej krawędzi*/
+}
+
+.panel {
+  height: 50px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.current-player {
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  flex-grow: 0 0 1;
+  justify-content: center;
+}
+.current-player #current-player {
+  display: inline-block;
+  width: 30;
+}
+
+.time-for-move {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#mode-select {
+  width: 100%; /* Dopasowanie do szerokości kontenera */
+  max-width: 120px; /* Maksymalna szerokość, aby nie był za szeroki */
+  padding: 8px; /* Dodanie paddingu, aby opcje były lepiej widoczne */
+  font-size: 14px; /* Dopasowanie rozmiaru czcionki */
+  background-color: #f0f0f0; /* Jasnoszare tło dla spójności z planszą */
+  border-radius: 5px; /* Zaokrąglenie rogów, jak w planszy */
+  border: 2px solid gray; /* Szary border, pasujący do planszy */
+  box-sizing: border-box; /* Zabezpiecza poprawne obliczanie szerokości z paddingiem */
+  appearance: none; /* Usunięcie domyślnego wyglądu selecta w niektórych przeglądarkach */
+  -webkit-appearance: none; /* Dla przeglądarek opartych na Webkit */
+  -moz-appearance: none; /* Dla przeglądarek opartych na Gecko */
+}
+
+#mode-select:focus {
+  outline: none; /* Usunięcie domyślnego obramowania przy focusie */
+  border-color: #0066cc; /* Podświetlenie bordera na niebiesko przy focusie */
+}
+
+#mode-select option {
+  padding: 5px;
+  background-color: #fff; /* Białe tło dla opcji */
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px); /*og zapis 100px 100px 100px*/
+  grid-template-rows: repeat(3, 100px); /*og zapis 100px 100px 100px*/
+  grid-gap: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid gray;
+}
+.board__item {
+  background-color: lightgray;
+  border-radius: 5px;
+  border: 1px solid gray;
+  transition: all 0.05s linear;
+  cursor: pointer;
+  position: relative;
+}
+.board__item:hover {
+  background-color: #bbb;
+}
+.board__item--filled-X::after, .board__item--filled-X::before {
+  position: absolute;
+  content: "";
+  height: 5px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  background-color: red;
+}
+.board__item--filled-X::before {
+  transform: translateY(-50%) rotate(-45deg);
+}
+.board__item--filled-X::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+.board__item--filled-O::before {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  border: 5px solid blue;
+  width: 80%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.reset-button {
+  margin-top: 20px;
+  padding: 10px 20px; /*w tym przypadku dodaje 10px wysokości i 20px szerokości przestrzeni wokół zawartości elementu na stronie html*/
+  border: 2px solid gray;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.05s linear;
+}
+.reset-button:hover {
+  background-color: #ddd;
+}
+
+/*# sourceMappingURL=output.css.map */

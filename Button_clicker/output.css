@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.title {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+}
+
+button {
+    padding: 12px 24px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.start-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.start-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.play-button {
+    background-color: #3498db;
+    color: white;
+}
+
+.reset-button {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.stop-watch {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 20px 0;
+}
+
+.click-counter {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin: 20px 0;
+}
+
+/* Dodaj animację przy kliknięciu */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Responsywność */
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5rem;
+    }
+    
+    .stop-watch {
+        font-size: 2rem;
+    }
+    
+    .click-counter {
+        font-size: 1.2rem;
+    }
+    
+    button {
+        padding: 10px 20px;
+    }
+}

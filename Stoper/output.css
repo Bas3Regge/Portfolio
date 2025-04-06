@@ -1,0 +1,62 @@
+body {
+    background-color: #282c34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: -apple 
+    system, BlinkMacSystemFont, sans-serif;
+}
+
+.stopwatch {
+    background-color: #2C303D;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    min-width: 300px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    color: #fff;
+    font-size: 14px;
+}
+
+#screen {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 300;
+    margin: 40px 0;
+}
+
+.stopwatchv2 {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #5b9aff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #4a86e8;
+}
+
+#pause-button, #stop-button, #reset-button {
+    background-color: #404756;
+}
+
+#pause-button:hover, #stop-button:hover, #reset-button:hover {
+    background-color: #4d5565;
+}
